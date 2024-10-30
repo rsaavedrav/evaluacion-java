@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "67ec6f01-6897-478f-a597-ca0206e958dc",
+		"name": "DesafioBCI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10394436",
+		"_collection_link": "https://crimson-crater-5916.postman.co/workspace/New-Team-Workspace~0278e58f-95b0-4add-ae7a-456bc57dd6f6/collection/10394436-67ec6f01-6897-478f-a597-ca0206e958dc?action=share&source=collection_link&creator=10394436"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan Rodriguez\",\r\n    \"email\": \"jose2@rodriguez.org\",\r\n    \"password\": \"hunter2\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"222222\",\r\n            \"cityCode\": \"1\",\r\n            \"countryCode\": \"57\"\r\n        },\r\n        {\r\n            \"number\": \"111111\",\r\n            \"cityCode\": \"1\",\r\n            \"countryCode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/person/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/person/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
