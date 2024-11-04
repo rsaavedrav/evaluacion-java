@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
             UserEntity emailP = repository.findByEmail(person.getEmail());
             if (emailP != null && emailP.getEmail().equalsIgnoreCase(person.getEmail())) {
                 responseP.setCode(500);
-                responseP.setMessageString("El correo ya se encuetra registrado");
+                responseP.setMessageString("El correo ya se encuentra registrado");
 
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.setSerializationInclusion(Include.NON_NULL);
