@@ -9,7 +9,7 @@ Spring Boot 2.5.4
 H2 Database
 
 Instalación
-Clonar repo: git clone https://bitbucket.org/leventis-rsaav/desafiobci/pull-requests/new?source=feature/apirest&t=1
+Clonar repo: git clone https://github.com/rsaavedrav/evaluacion-java.git
 
 Compila y ejecuta el proyecto con Maven:
 mvn clean install
@@ -28,27 +28,32 @@ Descripción: Crea un nuevo usuario en el sistema.
 
 Formato de Entrada:
 {
-  "name": "Juan Rodriguez",
-  "email": "juan@rodriguez.org",
-  "password": "hunter2",
-  "phones": [
-    {
-      "number": "1234567",
-      "citycode": "1",
-      "contrycode": "57"
-    }
-  ]
+    "name": "Juan Rodriguez",
+    "email": "jose6340@rodriguez.org",
+    "password": "hUnter23",
+    "phones": [
+        {
+            "number": "222222",
+            "cityCode": "1",
+            "countryCode": "57"
+        },
+        {
+            "number": "111111",
+            "cityCode": "1",
+            "countryCode": "57"
+        }
+    ]
 }
 
 Formato de Respuesta Exitosa:
 {
     "code": 200,
-    "id": "0045367f-494e-4efc-8cf2-308ecc74091e",
-    "created": "09-09-2024",
-    "modified": "09-09-2024",
-    "last_login": "09-09-2024",
+    "id": "5c0ff5a9-77f0-42aa-9a4c-8cf39c86023f",
+    "created": "04-11-2024",
+    "modified": "04-11-2024",
+    "last_login": "04-11-2024",
     "isactive": true,
-    "token": "15a2fb31-60fd-42e8-b239-7dafe17118ab"
+    "token": "4590730c-966e-4960-bf8d-ec8f46cfc3b6"
 }
 
 Errores Comunes:
@@ -68,15 +73,18 @@ Formato de Respuesta Exitosa:
 
 [
     {
-        "id": "408f134b-89de-42ff-ad3c-cee31d62e0c2",
+        "id": "5c0ff5a9-77f0-42aa-9a4c-8cf39c86023f",
         "name": "Juan Rodriguez",
-        "email": "jose60@rodriguez.org",
+        "email": "jose6340@rodriguez.org",
         "password": "hUnter23",
-        "created": "2024-09-09T01:17:22.122866",
-        "modified": "2024-09-09T01:17:22.122866",
-        "lastLogin": "2024-09-09T01:17:22.122866",
-        "token": "54dbf149-24cc-4c50-885e-04de707b2f22",
+        "created": "2024-11-04T13:02:37.797221",
+        "modified": "2024-11-04T13:02:37.797221",
+        "lastLogin": "2024-11-04T13:02:37.797221",
+        "token": "4590730c-966e-4960-bf8d-ec8f46cfc3b6",
         "active": true,
+        "accountNoExpired": false,
+        "accountNoLocked": false,
+        "credentialNoExpired": false,
         "phones": [
             {
                 "id": 1,
@@ -92,72 +100,18 @@ Formato de Respuesta Exitosa:
                 "countryCode": "57",
                 "user": null
             }
-        ]
-    },
-    {
-        "id": "2ce509a2-1e6e-4113-9359-cd6d448f031b",
-        "name": "Juan Rodriguez",
-        "email": "jose630@rodriguez.org",
-        "password": "hUnter23",
-        "created": "2024-09-09T01:17:26.288551",
-        "modified": "2024-09-09T01:17:26.288551",
-        "lastLogin": "2024-09-09T01:17:26.288551",
-        "token": "d2fbe323-e0ef-4f1a-8ce1-a5cbf43e74c1",
-        "active": true,
-        "phones": [
-            {
-                "id": 3,
-                "number": "222222",
-                "cityCode": "1",
-                "countryCode": "57",
-                "user": null
-            },
-            {
-                "id": 4,
-                "number": "111111",
-                "cityCode": "1",
-                "countryCode": "57",
-                "user": null
-            }
-        ]
-    },
-    {
-        "id": "105e7b2f-eb43-4437-9e83-f3862f94ddf7",
-        "name": "Juan Rodriguez",
-        "email": "jose6340@rodriguez.org",
-        "password": "hUnter23",
-        "created": "2024-09-09T01:17:29.056943",
-        "modified": "2024-09-09T01:17:29.056943",
-        "lastLogin": "2024-09-09T01:17:29.056943",
-        "token": "f351f205-1ea0-4c0e-93a1-f6346d19879f",
-        "active": true,
-        "phones": [
-            {
-                "id": 5,
-                "number": "222222",
-                "cityCode": "1",
-                "countryCode": "57",
-                "user": null
-            },
-            {
-                "id": 6,
-                "number": "111111",
-                "cityCode": "1",
-                "countryCode": "57",
-                "user": null
-            }
-        ]
+        ],
+        "enabled": false
     }
 ]
-
 
 Base de Datos
 La base de datos H2 se configura automáticamente cuando se ejecuta la aplicación. Puedes acceder a la consola de H2 para inspeccionar los datos en:
 
-URL: http://localhost:8080/h2
+URL: http://localhost:8080/h2-console
 JDBC URL: jdbc:h2:mem:mydb
 Usuario: sa
-Contraseña: password
+Contraseña: 
 
 
 Collectio Postman 
